@@ -1,5 +1,5 @@
 # parallelizer
-The function facilitates parallelizing tasks over multiple cores using the module multiprocessing. It sets up and launches the multiprocessing pool, starts the timer, reports the progress, and finally returns a list with the concatenated output of applying the function to the list. If too long time goes by without making any progress, the function logs a warning, terminates the pool, and returns whatever output was collected until the multiprocessing pool got stuck.
+The function facilitates parallelizing tasks over multiple cores using the module multiprocessing. It sets up and launches the multiprocessing pool, starts the timer, reports the progress, and finally returns a list with the concatenated output of applying a function to the target list. If too long time goes by without making any progress, the function logs a warning, terminates the pool, and returns whatever output was collected until the multiprocessing pool got stuck.
 
 The function requires the tiny_timer class, which it uses to log the progress of the pool. The class can be found in the tiny_timer repository, and needs to be made available for the parallelizer to import. Adding the code that defines the tiny_timer class manually would also work.
 
